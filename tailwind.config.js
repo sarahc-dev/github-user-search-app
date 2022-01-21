@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   darkMode: "class",
   theme: {
     boxShadow: {
@@ -24,8 +24,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        search: "url('../dist/assets/icon-search.svg')",
-        dark: "url('../dist/assets/icon-moon.svg')",
+        search: "url('./assets/icon-search.svg')",
       },
       backgroundPosition: {
         search: "1rem",

@@ -3,11 +3,11 @@ const lightBtn = document.getElementById("light");
 
 // Check system preference for darkmode
 
-// if (window.matchMedia && window.matchMedia("(prefers-color-scheme:light)").matches) {
-//   document.documentElement.classList.remove("dark");
-//   darkBtn.classList.remove("hidden");
-//   lightBtn.classList.add("hidden");
-// }
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) {
+  document.documentElement.classList.add("dark");
+  darkBtn.classList.add("hidden");
+  lightBtn.classList.remove("hidden");
+}
 
 // Toggle dark mode
 

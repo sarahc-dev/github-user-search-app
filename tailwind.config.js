@@ -56,7 +56,7 @@ module.exports = {
         alert: "#F74646",
       },
       fontSize: {
-        logo: "1.625rem",
+        logo: ["1.625rem", "2.375rem"],
         main: ["0.8125rem", "1.1875rem"],
         "main-md": ["0.9375rem", "1.375rem"],
         "ph-sm": "0.75rem",

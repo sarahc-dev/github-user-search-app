@@ -17,11 +17,11 @@
     <script src="./fetchData.js" defer></script>
   </head>
 
-  <body class="font-monospace  text-main bg-light-bg  dark:bg-dark-bg transition-all duration-200">
+  <body class="font-monospace text-main bg-light-bg dark:bg-dark-bg transition-all duration-200">
     <div class="px-6 md:px-0 py-7.5 md:py-35 lg:py-36 max-w-sm-container md:max-w-md-container lg:max-w-lg-container mx-auto">
       <header class="flex justify-between items-center pb-9">
         <h1 class="font-bold text-header-1 text-logo lowercase dark:text-white transition-colors duration-200">devfinder</h1>
-        <button id="dark" aria-description="Dark mode" class="text-light-main font-bold uppercase tracking-2.5 h-5 group hover:text-header-1 transition-all duration-200">
+        <button id="dark" aria-label="dark mode" class="text-light-main font-bold uppercase tracking-2.5 h-5 group hover:text-header-1 transition-all duration-200">
           Dark
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="inline-block" aria-hidden="true">
             <path
@@ -32,9 +32,9 @@
             />
           </svg>
         </button>
-        <button id="light" aria-description="Light mode" class="text-white font-bold uppercase tracking-2.5 h-5 group hover:text-dark-button-hover transition-all duration-200 hidden">
-        Light
-        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="inline-block" aria-hidden="true">
+        <button id="light" aria-label="light mode" class="text-white font-bold uppercase tracking-2.5 h-5 group hover:text-dark-button-hover transition-all duration-200 hidden">
+          Light
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="inline-block" aria-hidden="true">
             <g fill="#FFF" fill-rule="nonzero" class="group-hover:fill-dark-button-hover transition-fill duration-200">
               <path
                 d="M13.545 6.455c-.9-.9-2.17-1.481-3.545-1.481a4.934 4.934 0 00-3.545 1.481c-.9.9-1.481 2.17-1.481 3.545 0 1.376.582 2.646 1.481 3.545.9.9 2.17 1.481 3.545 1.481a4.934 4.934 0 003.545-1.481c.9-.9 1.481-2.17 1.481-3.545a4.934 4.934 0 00-1.481-3.545zM10 3.413a.7.7 0 00.688-.688V.688A.7.7 0 0010 0a.7.7 0 00-.688.688v2.037a.7.7 0 00.688.688zM15.635 5.344l1.455-1.455a.67.67 0 000-.952.67.67 0 00-.952 0l-1.455 1.455a.67.67 0 000 .952c.238.264.66.264.952 0zM19.312 9.312h-2.037a.7.7 0 00-.688.688.7.7 0 00.688.688h2.037A.7.7 0 0020 10a.7.7 0 00-.688-.688zM15.608 14.656a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455a.67.67 0 00.952 0 .67.67 0 000-.952l-1.455-1.455zM10 16.587a.7.7 0 00-.688.688v2.037A.7.7 0 0010 20a.7.7 0 00.688-.688v-2.037a.7.7 0 00-.688-.688zM4.365 14.656L2.91 16.111a.67.67 0 000 .952.67.67 0 00.952 0l1.455-1.455a.67.67 0 000-.952c-.238-.264-.66-.264-.952 0zM3.413 10a.7.7 0 00-.688-.688H.688A.7.7 0 000 10a.7.7 0 00.688.688h2.037A.7.7 0 003.413 10zM4.365 5.344a.67.67 0 00.952 0 .67.67 0 000-.952L3.862 2.937a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455z"
@@ -44,9 +44,17 @@
         </button>
       </header>
       <main>
-        <form id="search" class="bg-light-container h-15 md:h-17.25 rounded xs:bg-search bg-no-repeat  md:bg-search-md flex justify-between items-center pl-1.875 xs:pl-11.25 md:pl-20 pr-1.875 md:pr-2.5 mb-4 shadow-container dark:bg-dark-container transition-colors duration-200 cursor-pointer">
+        <form id="search" class="bg-light-container h-15 md:h-17.25 rounded xs:bg-search bg-no-repeat md:bg-search-md flex justify-between items-center pl-1.875 xs:pl-11.25 md:pl-20 pr-1.875 md:pr-2.5 mb-4 shadow-container dark:bg-dark-container transition-colors duration-200 cursor-pointer">
           <label for="username" class="sr-only">GitHub username</label>
-          <input type="text" name="username" id="username" placeholder="Search GitHub username&hellip;" autocomplete="off" spellcheck="false" class="text-light-main dark:text-white md:text-lg placeholder:text-ph-sm xs:placeholder:text-main md:placeholder:text-lg py-2 flex-1 overflow-hidden bg-transparent dark:placeholder:text-white focus:outline-none focus:border-none" />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Search GitHub username&hellip;"
+            autocomplete="off"
+            spellcheck="false"
+            class="text-light-main dark:text-white md:text-lg placeholder:text-ph-sm xs:placeholder:text-main md:placeholder:text-lg py-2 flex-1 overflow-hidden bg-transparent dark:placeholder:text-white focus:outline-none focus:border-none"
+          />
           <p role="alert" class="text-alert text-main md:text-main-md pr-2 md:pr-6 alert hidden">No results</p>
           <button type="submit" class="bg-button text-white text-sm md:text-base rounded-small min-w-button h-11.5 md:w-26.5 md:h-12.5 hover:bg-button-hover transition-all duration-300">Search</button>
         </form>
@@ -56,8 +64,8 @@
           <div class="user-data bg-light-container md:text-main-md rounded px-6 md:p-10 lg:px-12 pt-8 lg:pt-11 pb-12 lg:pb-12 shadow-container grid grid-cols-mobile md:grid-cols-tablet md:grid-rows-tablet lg:grid-cols-desktop dark:bg-dark-container transition-colors duration-200">
             <img alt="User avatar" class="user--avatar h-17.5 md:h-29.25 w-17.5 md:w-29.25 rounded-full row-span-2 lg:pt-1.25" />
             <div class="user col-span-2 lg:col-span-1">
-              <h1 class="user--name text-header-2 text-base md:text-logo font-bold md:pb-0.5 md:leading-name md:pt-3 lg:pt-0 dark:text-white"></h1>
-              <h2 class="user--login text-button md:text-base"></h2>
+              <h2 class="user--name text-header-2 text-base md:text-logo font-bold md:pb-0.5 md:leading-name md:pt-3 lg:pt-0 dark:text-white"></h2>
+              <h3 class="user--login text-button md:text-base"></h2>
             </div>
             <p class="user--joined text-light-secondary col-span-2 md:pt-1 lg:col-end-5 lg:text-right lg:pt-2 dark:text-white"></p>
             <p class="user--bio leading-bio col-span-3 pt-8.25 md:pt-6 lg:pt-5 pb-5.75 md:pb-8 text-light-main dark:text-white"></p>

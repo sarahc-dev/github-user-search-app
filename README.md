@@ -2,7 +2,7 @@
 
 This is a solution to the [GitHub Jobs API challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-jobs-api-93L-NL6rP). In this project, I have used the GitHub users API to pull profile data and display it.
 
-You can view the app <a href="https://github-user-search-ht1pfp574-sazzledazzle.vercel.app/" target="_blank">here</a>.
+You can view the app [here](https://github-user-search-ht1pfp574-sazzledazzle.vercel.app/).
 
 ## Tools
 
